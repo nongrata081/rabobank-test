@@ -51,6 +51,9 @@
     "tslint": "~5.9.1",
     "typescript": "~2.7.2"
   },
+  "commitlint": {
+    "extends": ["@commitlint/config-angular"]
+  },
   "config": {
     "commitizen": {
       "path": "cz-conventional-changelog"

@@ -12,7 +12,8 @@
     "prettify": "pretty-quick",
     "prettify-staged": "pretty-quick --staged",
     "webdriver-update-ci": "webdriver-manager update --standalone false --gecko false --versions.chrome 2.37",
-    "coverage": "ng test --watch=false --code-coverage"
+    "coverage": "ng test --watch=false --code-coverage",
+    "generate:changelog": "./node_modules/.bin/conventional-changelog -p angular -i CHANGELOG.md -s"
   },
   "private": true,
   "dependencies": {
@@ -45,6 +46,7 @@
     "@types/node": "~8.9.4",
     "codelyzer": "~4.2.1",
     "commitizen": "^2.10.1",
+    "conventional-changelog-cli": "^2.0.5",
     "cz-conventional-changelog": "^2.1.0",
     "husky": "^1.0.1",
     "jasmine-core": "~2.99.1",

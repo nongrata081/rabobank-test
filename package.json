@@ -11,7 +11,8 @@
     "commit": "git-cz",
     "prettify": "pretty-quick",
     "prettify-staged": "pretty-quick --staged",
-    "webdriver-update-ci": "webdriver-manager update --standalone false --gecko false --versions.chrome 2.37"
+    "webdriver-update-ci": "webdriver-manager update --standalone false --gecko false --versions.chrome 2.37",
+    "coverage": "ng test --watch=false --code-coverage"
   },
   "private": true,
   "dependencies": {

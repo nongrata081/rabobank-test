@@ -103,6 +103,14 @@
 						"tsConfig": ["src/tsconfig.app.json", "src/tsconfig.spec.json"],
 						"exclude": ["**/node_modules/**"]
 					}
+				},
+				"server": {
+					"builder": "@angular-devkit/build-angular:server",
+					"options": {
+						"outputPath": "dist/rabobank-test-server",
+						"main": "src/main.server.ts",
+						"tsConfig": "src/tsconfig.server.json"
+					}
 				}
 			}
 		},

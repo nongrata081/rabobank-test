@@ -36,6 +36,7 @@
     "@angular/language-service": "^6.1.0",
     "@commitlint/cli": "^7.1.2",
     "@commitlint/config-conventional": "^7.1.2",
+    "@commitlint/travis-cli": "^7.1.2",
     "@types/jasmine": "~2.8.6",
     "@types/jasminewd2": "~2.0.3",
     "@types/node": "~8.9.4",

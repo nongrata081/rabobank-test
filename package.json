@@ -17,7 +17,8 @@
     "build:client-and-server-bundles": "ng build --prod && ng run rabobank-test:server",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
     "build:ssr": "yarn build:client-and-server-bundles && yarn webpack:server",
-    "serve:ssr": "node dist/server.js"
+    "serve:ssr": "node dist/server.js",
+    "ssr": "yarn build:ssr && yarn serve:ssr"
   },
   "private": true,
   "dependencies": {

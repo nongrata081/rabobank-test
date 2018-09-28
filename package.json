@@ -79,7 +79,7 @@
     "hooks": {
       "pre-commit": "run-s prettify-staged lint",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "enforce-gitflow-branches"
+      "pre-push": "node ./node_modules/.bin/enforce-gitflow-branches"
     }
   },
   "browserslist": [

@@ -9,7 +9,8 @@
     "lint": "ng lint",
     "e2e": "ng e2e",
     "commit": "git-cz",
-    "prettify": "pretty-quick --staged",
+    "prettify": "pretty-quick",
+    "prettify-staged": "pretty-quick --staged",
     "webdriver-update-ci": "webdriver-manager update --standalone false --gecko false --versions.chrome 2.37"
   },
   "private": true,
@@ -68,7 +69,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "run-s prettify lint",
+      "pre-commit": "run-s prettify-staged lint",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   }

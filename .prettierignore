@@ -1,4 +1,4 @@
 package.json
 tslint.json
 tsconfig.json
-docs
+dist

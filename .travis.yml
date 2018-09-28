@@ -18,6 +18,7 @@ cache:
     - node_modules
 
 script:
+  - commitlint-travis
   - yarn prettify
   - ng lint
   - ng test --watch=false --no-progress

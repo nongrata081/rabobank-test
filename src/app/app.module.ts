@@ -8,7 +8,7 @@ import { MatButtonModule, MatIconModule } from '@angular/material';
 @NgModule({
 	declarations: [AppComponent],
 	imports: [
-		BrowserModule,
+		BrowserModule.withServerTransition({ appId: 'rabotest' }),
 		AppRoutingModule,
 		BrowserAnimationsModule,
 		MatButtonModule,

@@ -1,8 +1,12 @@
-let parser = require('xml2json');
-let fs = require('fs');
-let path = require('path');
-let xmlRecords = path.join(__dirname, '../data/records.xml');
-let jsonRecordsFromXML = path.join(__dirname, '../data/recordsFromXml.json');
+const parser = require('xml2json');
+const fs = require('fs');
+const path = require('path');
+const xmlRecords = path.join(__dirname, '../data/src/records.xml');
+const jsonRecordsFile = 'records-from-xml.json';
+const jsonRecordsFromXML = path.join(
+	__dirname,
+	`../data/dist/${jsonRecordsFile}`
+);
 
 fs.readFile(xmlRecords, { encoding: 'utf-8' }, (err, data) => {
 	if (!err) {
@@ -10,7 +14,9 @@ fs.readFile(xmlRecords, { encoding: 'utf-8' }, (err, data) => {
 		console.log(jsonRecords);
 		fs.writeFile(jsonRecordsFromXML, jsonRecords, err => {
 			if (!err) {
-				console.log('XML records were written to jsonRecordsFromXml.json');
+				console.log(
+					`XML records were written to records/data/dist/${jsonRecordsFile}`
+				);
 			} else {
 				console.log(err);
 			}

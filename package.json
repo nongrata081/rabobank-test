@@ -58,6 +58,7 @@
     "codelyzer": "~4.2.1",
     "commitizen": "^2.10.1",
     "conventional-changelog-cli": "^2.0.5",
+    "csvtojson": "^2.0.8",
     "cz-conventional-changelog": "^2.1.0",
     "enforce-gitflow-branches": "^1.0.8",
     "husky": "^1.0.1",

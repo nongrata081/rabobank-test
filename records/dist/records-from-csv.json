@@ -1,1 +1,82 @@
-[{"Reference":"106627","Account Number":"NL46ABNA0625805417","Description":"Subscription for Erik de Vries","Start Balance":"80.76","Mutation":"-2.23","End Balance":"78.53"},{"Reference":"112806","Account Number":"NL74ABNA0248990274","Description":"Candy from Jan de Vries","Start Balance":"109.75","Mutation":"-23.94","End Balance":"85.81"},{"Reference":"124020","Account Number":"NL27SNSB0917829871","Description":"Flowers for Rik Theu�","Start Balance":"72.16","Mutation":"-18.94","End Balance":"53.22"},{"Reference":"170175","Account Number":"NL43AEGO0773393871","Description":"Candy for Richard Dekker","Start Balance":"11.62","Mutation":"+45.38","End Balance":"57"},{"Reference":"112806","Account Number":"NL91RABO0315273637","Description":"Subscription from Vincent Dekker","Start Balance":"68.31","Mutation":"-6.31","End Balance":"62"},{"Reference":"112806","Account Number":"NL91RABO0315273637","Description":"Clothes from Richard Theu�","Start Balance":"31.03","Mutation":"+0.27","End Balance":"31.3"},{"Reference":"158644","Account Number":"NL90ABNA0585647886","Description":"Clothes for Willem Dekker","Start Balance":"98.5","Mutation":"-42.77","End Balance":"55.73"},{"Reference":"181855","Account Number":"NL93ABNA0585619023","Description":"Flowers for Rik King","Start Balance":"106.92","Mutation":"+8.29","End Balance":"115.21"},{"Reference":"131702","Account Number":"NL91RABO0315273637","Description":"Tickets from Rik Theu�","Start Balance":"109.68","Mutation":"-21.68","End Balance":"88"},{"Reference":"184927","Account Number":"NL43AEGO0773393871","Description":"Flowers for Richard Dekker","Start Balance":"42.43","Mutation":"-43.43","End Balance":"-1"}]
+[
+  {
+    "reference": "106627",
+    "accountNumber": "NL46ABNA0625805417",
+    "description": "Subscription for Erik de Vries",
+    "startBalance": "80.76",
+    "mutation": "-2.23",
+    "endBalance": "78.53"
+  },
+  {
+    "reference": "112806",
+    "accountNumber": "NL74ABNA0248990274",
+    "description": "Candy from Jan de Vries",
+    "startBalance": "109.75",
+    "mutation": "-23.94",
+    "endBalance": "85.81"
+  },
+  {
+    "reference": "124020",
+    "accountNumber": "NL27SNSB0917829871",
+    "description": "Flowers for Rik Theu�",
+    "startBalance": "72.16",
+    "mutation": "-18.94",
+    "endBalance": "53.22"
+  },
+  {
+    "reference": "170175",
+    "accountNumber": "NL43AEGO0773393871",
+    "description": "Candy for Richard Dekker",
+    "startBalance": "11.62",
+    "mutation": "+45.38",
+    "endBalance": "57"
+  },
+  {
+    "reference": "112806",
+    "accountNumber": "NL91RABO0315273637",
+    "description": "Subscription from Vincent Dekker",
+    "startBalance": "68.31",
+    "mutation": "-6.31",
+    "endBalance": "62"
+  },
+  {
+    "reference": "112806",
+    "accountNumber": "NL91RABO0315273637",
+    "description": "Clothes from Richard Theu�",
+    "startBalance": "31.03",
+    "mutation": "+0.27",
+    "endBalance": "31.3"
+  },
+  {
+    "reference": "158644",
+    "accountNumber": "NL90ABNA0585647886",
+    "description": "Clothes for Willem Dekker",
+    "startBalance": "98.5",
+    "mutation": "-42.77",
+    "endBalance": "55.73"
+  },
+  {
+    "reference": "181855",
+    "accountNumber": "NL93ABNA0585619023",
+    "description": "Flowers for Rik King",
+    "startBalance": "106.92",
+    "mutation": "+8.29",
+    "endBalance": "115.21"
+  },
+  {
+    "reference": "131702",
+    "accountNumber": "NL91RABO0315273637",
+    "description": "Tickets from Rik Theu�",
+    "startBalance": "109.68",
+    "mutation": "-21.68",
+    "endBalance": "88"
+  },
+  {
+    "reference": "184927",
+    "accountNumber": "NL43AEGO0773393871",
+    "description": "Flowers for Richard Dekker",
+    "startBalance": "42.43",
+    "mutation": "-43.43",
+    "endBalance": "-1"
+  }
+]

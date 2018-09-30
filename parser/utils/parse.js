@@ -4,7 +4,11 @@ const parser = require('xml2json');
 const validate = require('./validate');
 
 const parseXML = (data, distFile) => {
-	let jsonRecords = parser.toJson(data);
+	let jsonRecords = JSON.stringify(
+		JSON.parse(parser.toJson(data)).records.record,
+		null,
+		2
+	);
 	fs.writeFile(distFile, jsonRecords, err => {
 		if (!err) {
 			console.log(`XML records were written to ${distFile}`);
@@ -14,11 +18,29 @@ const parseXML = (data, distFile) => {
 	});
 };
 
+const normalizeData = data => {
+	let mapObj = {
+		Reference: 'reference',
+		'Account Number': 'accountNumber',
+		Description: 'description',
+		'Start Balance': 'startBalance',
+		Mutation: 'mutation',
+		'End Balance': 'endBalance'
+	};
+
+	const regex = /Reference|Account Number|Description|Start Balance|Mutation|End Balance/g;
+
+	return (data = data.replace(regex, function(matched) {
+		return mapObj[matched];
+	}));
+};
+
 const parseCSV = (srcFile, distFile) => {
 	csv()
 		.fromFile(srcFile)
 		.then(jsonObj => {
-			fs.writeFile(distFile, JSON.stringify(jsonObj), err => {
+			let jsonRecords = normalizeData(JSON.stringify(jsonObj, null, 2));
+			fs.writeFile(distFile, jsonRecords, err => {
 				if (!err) {
 					console.log(`CSV records were written to ${distFile}`);
 				} else {

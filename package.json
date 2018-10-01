@@ -12,7 +12,7 @@
     "prettify": "pretty-quick",
     "prettify-staged": "pretty-quick --staged",
     "webdriver-update-ci": "webdriver-manager update --standalone false --gecko false --versions.chrome 2.37",
-    "coverage": "ng test --watch=false --code-coverage",
+    "coverage": "ng test --watch=false --code-coverage rabobank-test components",
     "generate:changelog": "./node_modules/.bin/conventional-changelog -p angular -i CHANGELOG.md -s",
     "build:client-and-server-bundles": "ng build --prod && ng run rabobank-test:server",
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",

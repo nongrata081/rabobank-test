@@ -1,5 +1,4 @@
 const fs = require('fs');
-const path = require('path');
 const csv = require('csvtojson');
 const parser = require('xml2json');
 const validate = require('./validate');

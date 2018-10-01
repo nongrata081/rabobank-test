@@ -60,7 +60,7 @@
     webpack "~4.9.2"
     webpack-dev-middleware "^3.1.3"
     webpack-dev-server "^3.1.4"
-    webpack-merge "^4.1.2"
+    webpack-mergeRecords "^4.1.2"
     webpack-sources "^1.1.0"
     webpack-subresource-integrity "^1.1.0-rc.4"
   optionalDependencies:
@@ -327,7 +327,7 @@
     babel-polyfill "6.26.0"
     chalk "2.3.1"
     get-stdin "5.0.1"
-    lodash.merge "4.6.1"
+    lodash.mergeRecords "4.6.1"
     lodash.pick "4.4.0"
     meow "5.0.0"
 
@@ -389,7 +389,7 @@
     "@commitlint/resolve-extends" "^7.1.2"
     babel-runtime "^6.23.0"
     cosmiconfig "^4.0.0"
-    lodash.merge "4.6.1"
+    lodash.mergeRecords "4.6.1"
     lodash.mergewith "4.6.1"
     lodash.pick "4.4.0"
     lodash.topairs "4.3.0"
@@ -424,7 +424,7 @@
   integrity sha512-zwbifMB9DeHP4sYQdrkx+XJh5Q1lyP/OdlErUCC34NV4Lkxw/XxXF4St3e+y1X28/SgrEc2XSOS6n/vQQfUlLA==
   dependencies:
     babel-runtime "6.26.0"
-    lodash.merge "4.6.1"
+    lodash.mergeRecords "4.6.1"
     lodash.omit "4.5.0"
     require-uncached "^1.0.3"
     resolve-from "^4.0.0"
@@ -1957,7 +1957,7 @@ connect@^3.6.0:
     debug "2.6.9"
     finalhandler "1.1.0"
     parseurl "~1.3.2"
-    utils-merge "1.0.1"
+    utils-mergeRecords "1.0.1"
 
 console-browserify@^1.1.0:
   version "1.1.0"
@@ -3188,7 +3188,7 @@ express@^4.16.2, express@^4.16.3:
     etag "~1.8.1"
     finalhandler "1.1.1"
     fresh "0.5.2"
-    merge-descriptors "1.0.1"
+    mergeRecords-descriptors "1.0.1"
     methods "~1.1.2"
     on-finished "~2.3.0"
     parseurl "~1.3.2"
@@ -3202,7 +3202,7 @@ express@^4.16.2, express@^4.16.3:
     setprototypeof "1.1.0"
     statuses "~1.4.0"
     type-is "~1.6.16"
-    utils-merge "1.0.1"
+    utils-mergeRecords "1.0.1"
     vary "~1.1.2"
 
 extend-shallow@^2.0.1:
@@ -3411,7 +3411,7 @@ find-node-modules@1.0.4:
   integrity sha1-tt6zzMtpnIcDdne87eLF9YYrJVA=
   dependencies:
     findup-sync "0.4.2"
-    merge "^1.2.0"
+    mergeRecords "^1.2.0"
 
 find-root@1.0.0:
   version "1.0.0"
@@ -5288,9 +5288,9 @@ lodash.map@^4.5.1:
   resolved "https://registry.yarnpkg.com/lodash.map/-/lodash.map-4.6.0.tgz#771ec7839e3473d9c4cde28b19394c3562f4f6d3"
   integrity sha1-dx7Hg540c9nEzeKLGTlMNWL09tM=
 
-lodash.merge@4.6.1:
+lodash.mergeRecords@4.6.1:
   version "4.6.1"
-  resolved "https://registry.yarnpkg.com/lodash.merge/-/lodash.merge-4.6.1.tgz#adc25d9cb99b9391c59624f379fbba60d7111d54"
+  resolved "https://registry.yarnpkg.com/lodash.mergeRecords/-/lodash.mergeRecords-4.6.1.tgz#adc25d9cb99b9391c59624f379fbba60d7111d54"
   integrity sha512-AOYza4+Hf5z1/0Hztxpm2/xiPZgi/cjMqdnKTUWTBSKchJlxXXuUSxCCl8rJlf4g6yww/j6mA8nC8Hw/EZWxKQ==
 
 lodash.mergewith@4.6.1, lodash.mergewith@^4.6.0:
@@ -5546,14 +5546,14 @@ meow@^4.0.0:
     redent "^2.0.0"
     trim-newlines "^2.0.0"
 
-merge-descriptors@1.0.1:
+mergeRecords-descriptors@1.0.1:
   version "1.0.1"
-  resolved "https://registry.yarnpkg.com/merge-descriptors/-/merge-descriptors-1.0.1.tgz#b00aaa556dd8b44568150ec9d1b953f3f90cbb61"
+  resolved "https://registry.yarnpkg.com/mergeRecords-descriptors/-/mergeRecords-descriptors-1.0.1.tgz#b00aaa556dd8b44568150ec9d1b953f3f90cbb61"
   integrity sha1-sAqqVW3YtEVoFQ7J0blT8/kMu2E=
 
-merge@^1.2.0:
+mergeRecords@^1.2.0:
   version "1.2.0"
-  resolved "https://registry.yarnpkg.com/merge/-/merge-1.2.0.tgz#7531e39d4949c281a66b8c5a6e0265e8b05894da"
+  resolved "https://registry.yarnpkg.com/mergeRecords/-/mergeRecords-1.2.0.tgz#7531e39d4949c281a66b8c5a6e0265e8b05894da"
   integrity sha1-dTHjnUlJwoGma4xabgJl6LBYlNo=
 
 methods@~1.1.2:
@@ -8682,9 +8682,9 @@ utila@~0.4:
   resolved "https://registry.yarnpkg.com/utila/-/utila-0.4.0.tgz#8a16a05d445657a3aea5eecc5b12a4fa5379772c"
   integrity sha1-ihagXURWV6Oupe7MWxKk+lN5dyw=
 
-utils-merge@1.0.1:
+utils-mergeRecords@1.0.1:
   version "1.0.1"
-  resolved "https://registry.yarnpkg.com/utils-merge/-/utils-merge-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
+  resolved "https://registry.yarnpkg.com/utils-mergeRecords/-/utils-mergeRecords-1.0.1.tgz#9f95710f50a267947b2ccc124741c1028427e713"
   integrity sha1-n5VxD1CiZ5R7LMwSR0HBAoQn5xM=
 
 uuid@^2.0.1:
@@ -8871,9 +8871,9 @@ webpack-log@^2.0.0:
     ansi-colors "^3.0.0"
     uuid "^3.3.2"
 
-webpack-merge@^4.1.2:
+webpack-mergeRecords@^4.1.2:
   version "4.1.4"
-  resolved "https://registry.yarnpkg.com/webpack-merge/-/webpack-merge-4.1.4.tgz#0fde38eabf2d5fd85251c24a5a8c48f8a3f4eb7b"
+  resolved "https://registry.yarnpkg.com/webpack-mergeRecords/-/webpack-mergeRecords-4.1.4.tgz#0fde38eabf2d5fd85251c24a5a8c48f8a3f4eb7b"
   integrity sha512-TmSe1HZKeOPey3oy1Ov2iS3guIZjWvMT2BBJDzzT5jScHTjVC3mpjJofgueEzaEd6ibhxRDD6MIblDr8tzh8iQ==
   dependencies:
     lodash "^4.17.5"

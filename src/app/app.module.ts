@@ -8,6 +8,7 @@ import { RouterModule } from '@angular/router';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { ComponentsModule } from '../../projects/components/src/lib/components.module';
 import { HttpClientModule } from '@angular/common/http';
+import { FetchRecordsService } from '../../projects/components/src/lib/fetch-records/fetch-records.service';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -23,7 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
 		HttpClientModule
 	],
 	schemas: [NO_ERRORS_SCHEMA],
-	providers: [],
+	providers: [FetchRecordsService],
 	bootstrap: [AppComponent]
 })
 export class AppModule {}

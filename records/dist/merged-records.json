@@ -1,0 +1,162 @@
+[
+  {
+    "reference": "106627",
+    "accountNumber": "NL46ABNA0625805417",
+    "description": "Subscription for Erik de Vries",
+    "startBalance": "80.76",
+    "mutation": "-2.23",
+    "endBalance": "78.53"
+  },
+  {
+    "reference": "112806",
+    "accountNumber": "NL74ABNA0248990274",
+    "description": "Candy from Jan de Vries",
+    "startBalance": "109.75",
+    "mutation": "-23.94",
+    "endBalance": "85.81"
+  },
+  {
+    "reference": "124020",
+    "accountNumber": "NL27SNSB0917829871",
+    "description": "Flowers for Rik Theu�",
+    "startBalance": "72.16",
+    "mutation": "-18.94",
+    "endBalance": "53.22"
+  },
+  {
+    "reference": "170175",
+    "accountNumber": "NL43AEGO0773393871",
+    "description": "Candy for Richard Dekker",
+    "startBalance": "11.62",
+    "mutation": "+45.38",
+    "endBalance": "57"
+  },
+  {
+    "reference": "112806",
+    "accountNumber": "NL91RABO0315273637",
+    "description": "Subscription from Vincent Dekker",
+    "startBalance": "68.31",
+    "mutation": "-6.31",
+    "endBalance": "62"
+  },
+  {
+    "reference": "112806",
+    "accountNumber": "NL91RABO0315273637",
+    "description": "Clothes from Richard Theu�",
+    "startBalance": "31.03",
+    "mutation": "+0.27",
+    "endBalance": "31.3"
+  },
+  {
+    "reference": "158644",
+    "accountNumber": "NL90ABNA0585647886",
+    "description": "Clothes for Willem Dekker",
+    "startBalance": "98.5",
+    "mutation": "-42.77",
+    "endBalance": "55.73"
+  },
+  {
+    "reference": "181855",
+    "accountNumber": "NL93ABNA0585619023",
+    "description": "Flowers for Rik King",
+    "startBalance": "106.92",
+    "mutation": "+8.29",
+    "endBalance": "115.21"
+  },
+  {
+    "reference": "131702",
+    "accountNumber": "NL91RABO0315273637",
+    "description": "Tickets from Rik Theu�",
+    "startBalance": "109.68",
+    "mutation": "-21.68",
+    "endBalance": "88"
+  },
+  {
+    "reference": "184927",
+    "accountNumber": "NL43AEGO0773393871",
+    "description": "Flowers for Richard Dekker",
+    "startBalance": "42.43",
+    "mutation": "-43.43",
+    "endBalance": "-1"
+  },
+  {
+    "reference": "168036",
+    "accountNumber": "NL91RABO0315273637",
+    "description": "Tickets for Rik Bakker",
+    "startBalance": "85.69",
+    "mutation": "-19.48",
+    "endBalance": "66.21"
+  },
+  {
+    "reference": "168512",
+    "accountNumber": "NL90ABNA0585647886",
+    "description": "Flowers from Peter King",
+    "startBalance": "5429",
+    "mutation": "-939",
+    "endBalance": "6368"
+  },
+  {
+    "reference": "102899",
+    "accountNumber": "NL56RABO0149876948",
+    "description": "Tickets from Rik King",
+    "startBalance": "72.1",
+    "mutation": "-38.33",
+    "endBalance": "33.77"
+  },
+  {
+    "reference": "144704",
+    "accountNumber": "NL46ABNA0625805417",
+    "description": "Tickets for Willem Dekker",
+    "startBalance": "82.71",
+    "mutation": "-20.01",
+    "endBalance": "62.7"
+  },
+  {
+    "reference": "137009",
+    "accountNumber": "NL74ABNA0248990274",
+    "description": "Candy for Jan Dekker",
+    "startBalance": "69.19",
+    "mutation": "+33.7",
+    "endBalance": "102.89"
+  },
+  {
+    "reference": "105792",
+    "accountNumber": "NL43AEGO0773393871",
+    "description": "Subscription from Vincent de Vries",
+    "startBalance": "45.97",
+    "mutation": "-16.79",
+    "endBalance": "29.18"
+  },
+  {
+    "reference": "116500",
+    "accountNumber": "NL69ABNA0433647324",
+    "description": "Clothes from Willem Dekker",
+    "startBalance": "10.1",
+    "mutation": "-0.3",
+    "endBalance": "9.8"
+  },
+  {
+    "reference": "162854",
+    "accountNumber": "NL90ABNA0585647886",
+    "description": "Candy from Richard de Vries",
+    "startBalance": "103.79",
+    "mutation": "-34.11",
+    "endBalance": "69.68"
+  },
+  {
+    "reference": "180568",
+    "accountNumber": "NL91RABO0315273637",
+    "description": "Subscription for Daniël Theuß",
+    "startBalance": "3980",
+    "mutation": "+1000",
+    "endBalance": "4981"
+  },
+  {
+    "reference": "132594",
+    "accountNumber": "NL27SNSB0917829871",
+    "description": "Flowers for Jan Theuß",
+    "startBalance": "56.74",
+    "mutation": "+20.46",
+    "endBalance": "77.2"
+  }
+]

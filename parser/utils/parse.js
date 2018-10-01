@@ -1,7 +1,25 @@
 const fs = require('fs');
+const path = require('path');
 const csv = require('csvtojson');
 const parser = require('xml2json');
 const validate = require('./validate');
+
+const normalizeData = data => {
+  let mapObj = {
+    Reference: 'reference',
+    'Account Number': 'accountNumber',
+    Description: 'description',
+    'Start Balance': 'startBalance',
+    Mutation: 'mutation',
+    'End Balance': 'endBalance'
+  };
+
+  const regex = /Reference|Account Number|Description|Start Balance|Mutation|End Balance/g;
+
+  return (data = data.replace(regex, function(matched) {
+    return mapObj[matched];
+  }));
+};
 
 const parseXML = (data, distFile) => {
 	let jsonRecords = JSON.stringify(
@@ -16,23 +34,6 @@ const parseXML = (data, distFile) => {
 			console.log(err);
 		}
 	});
-};
-
-const normalizeData = data => {
-	let mapObj = {
-		Reference: 'reference',
-		'Account Number': 'accountNumber',
-		Description: 'description',
-		'Start Balance': 'startBalance',
-		Mutation: 'mutation',
-		'End Balance': 'endBalance'
-	};
-
-	const regex = /Reference|Account Number|Description|Start Balance|Mutation|End Balance/g;
-
-	return (data = data.replace(regex, function(matched) {
-		return mapObj[matched];
-	}));
 };
 
 const parseCSV = (srcFile, distFile) => {
@@ -75,5 +76,6 @@ const parseFile = (srcFile, distFile) => {
 
 module.exports = {
 	file: parseFile,
-	csv: parseCSV
+	csv: parseCSV,
+  merge: mergeFiles
 };

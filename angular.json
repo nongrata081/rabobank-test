@@ -23,8 +23,12 @@
 						"polyfills": "src/polyfills.ts",
 						"tsConfig": "src/tsconfig.app.json",
 						"assets": ["src/favicon.ico", "src/assets"],
-						"styles": ["src/styles.sass"],
-						"scripts": []
+						"styles": [
+							"node_modules/angular-bootstrap-md/scss/bootstrap/bootstrap.scss",
+							"node_modules/angular-bootstrap-md/scss/mdb-free.scss",
+							"src/styles.sass"
+						],
+						"scripts": ["node_modules/chart.js/dist/Chart.js"]
 					},
 					"configurations": {
 						"hmr": {
@@ -134,6 +138,44 @@
 					"builder": "@angular-devkit/build-angular:tslint",
 					"options": {
 						"tsConfig": "e2e/tsconfig.e2e.json",
+						"exclude": ["**/node_modules/**"]
+					}
+				}
+			}
+		},
+		"components": {
+			"root": "projects/components",
+			"sourceRoot": "projects/components/src",
+			"projectType": "library",
+			"prefix": "lib",
+			"architect": {
+				"build": {
+					"builder": "@angular-devkit/build-ng-packagr:build",
+					"options": {
+						"tsConfig": "projects/components/tsconfig.lib.json",
+						"project": "projects/components/ng-package.json"
+					},
+					"configurations": {
+						"production": {
+							"project": "projects/components/ng-package.prod.json"
+						}
+					}
+				},
+				"test": {
+					"builder": "@angular-devkit/build-angular:karma",
+					"options": {
+						"main": "projects/components/src/test.ts",
+						"tsConfig": "projects/components/tsconfig.spec.json",
+						"karmaConfig": "projects/components/karma.conf.js"
+					}
+				},
+				"lint": {
+					"builder": "@angular-devkit/build-angular:tslint",
+					"options": {
+						"tsConfig": [
+							"projects/components/tsconfig.lib.json",
+							"projects/components/tsconfig.spec.json"
+						],
 						"exclude": ["**/node_modules/**"]
 					}
 				}

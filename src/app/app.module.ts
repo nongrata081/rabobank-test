@@ -1,10 +1,12 @@
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule, MatIconModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
+import { MDBBootstrapModule } from 'angular-bootstrap-md';
+import { ComponentsModule } from '../../projects/components/src/lib/components.module';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -14,8 +16,11 @@ import { RouterModule } from '@angular/router';
 		BrowserAnimationsModule,
 		MatButtonModule,
 		MatIconModule,
-		RouterModule
+		RouterModule,
+		MDBBootstrapModule.forRoot(),
+		ComponentsModule
 	],
+	schemas: [NO_ERRORS_SCHEMA],
 	providers: [],
 	bootstrap: [AppComponent]
 })

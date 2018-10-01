@@ -7,6 +7,7 @@ import { MatButtonModule, MatIconModule } from '@angular/material';
 import { RouterModule } from '@angular/router';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { ComponentsModule } from '../../projects/components/src/lib/components.module';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
 	declarations: [AppComponent],
@@ -18,7 +19,8 @@ import { ComponentsModule } from '../../projects/components/src/lib/components.m
 		MatIconModule,
 		RouterModule,
 		MDBBootstrapModule.forRoot(),
-		ComponentsModule
+		ComponentsModule,
+		HttpClientModule
 	],
 	schemas: [NO_ERRORS_SCHEMA],
 	providers: [],

@@ -1,0 +1,31 @@
+<div class="container">
+  <h1>Invalid records</h1>
+
+  <h5 class="table-heading">By reference</h5>
+  <table mat-table [dataSource]="invalidReference" class="mat-elevation-z8">
+    <ng-container matColumnDef="reference">
+      <th mat-header-cell *matHeaderCellDef> Transaction reference </th>
+      <td mat-cell *matCellDef="let element"> {{element.reference}} </td>
+    </ng-container>
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> Description </th>
+      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+
+  <h5 class="table-heading">By end balance</h5>
+  <table mat-table [dataSource]="invalidEndBalance" class="mat-elevation-z8">
+    <ng-container matColumnDef="reference">
+      <th mat-header-cell *matHeaderCellDef> Transaction reference </th>
+      <td mat-cell *matCellDef="let element"> {{element.reference}} </td>
+    </ng-container>
+    <ng-container matColumnDef="description">
+      <th mat-header-cell *matHeaderCellDef> Description </th>
+      <td mat-cell *matCellDef="let element"> {{element.description}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>
+</div>

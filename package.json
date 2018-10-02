@@ -101,7 +101,7 @@
     "hooks": {
       "pre-commit": "run-s prettify-staged lint",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "yarn enforce:gitflow && yarn prettify && yarn lint && yarn test && yarn coverage && yarn e2e"
+      "pre-push": "yarn enforce:gitflow && yarn prettify && yarn lint && yarn test --watch=false && yarn coverage && yarn e2e"
     }
   },
   "browserslist": [

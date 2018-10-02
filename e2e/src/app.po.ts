@@ -1,11 +1,37 @@
-import { browser, by, element } from 'protractor';
+import { browser, $, $$ } from 'protractor';
 
 export class AppPage {
+	referenceDescriptions = [
+		'Candy from Jan de Vries',
+		'Clothes from Richard Theu�',
+		'Subscription from Vincent Dekker'
+	];
+
+	endBalanceDescriptions = ['Flowers for Richard Dekker'];
+
 	navigateTo() {
 		return browser.get('/');
 	}
 
-	getParagraphText() {
-		return element(by.css('app-root span')).getText();
+	isElementPresent(el) {
+		return $(el).isPresent();
+	}
+
+	getElementText(el) {
+		return $(el).getText();
+	}
+
+	getElementsText(el) {
+		return $$(el).getText();
+	}
+
+	getFirstElementsText(els) {
+		return $$(els)
+			.first()
+			.getText();
+	}
+
+	getElementsCount(els) {
+		return $$(els).count();
 	}
 }

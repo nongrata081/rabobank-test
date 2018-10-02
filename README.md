@@ -73,6 +73,7 @@ Deployed app is available [here](https://nongrata081.github.io/rabobank-test/)
 ## TODO
 
 - Unit tests for parser and validator
+- Unit tests `rabobank-test` app and `components` library
 - E2E tests for `rabobank-test` app
 - Automate dependency updates via [renovate](https://github.com/renovatebot/renovate)
 - Add [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)

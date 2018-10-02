@@ -21,8 +21,10 @@ cache:
 script:
   - commitlint-travis
   - yarn prettify
-  - ng lint rabobank-test components
-  - ng test --watch=false --no-progress rabobank-test components --karma-config=./src/coverage-karma.conf.js
+  - yarn lint:app
+  - yarn lint:lib
+  - ng test --watch=false --no-progress rabobank-test --karma-config=./src/coverage-karma.conf.js
+  - ng test --watch=false --no-progress components --karma-config=./src/coverage-karma.conf.js
   - yarn coverage
   - yarn webdriver-update-ci
   - ng e2e --protractor-config=./e2e/protractor-ci.conf.js --webdriver-update=false

@@ -5,8 +5,10 @@
     "ng": "ng",
     "start": "ng serve --hmr --configuration hmr -o",
     "build": "ng build",
-    "test": "ng test rabobank-test components",
-    "lint": "ng lint rabobank-test components",
+    "test:app": "ng test rabobank-test",
+    "test:lib": "ng test components",
+    "lint:app": "ng lint rabobank-test",
+    "lint:lib": "ng lint components",
     "e2e": "ng e2e",
     "commit": "git-cz",
     "prettify": "pretty-quick",
@@ -107,7 +109,7 @@
     "hooks": {
       "pre-commit": "run-s prettify-staged lint",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "yarn enforce:gitflow && yarn prettify && yarn lint && yarn test --watch=false && yarn coverage && yarn e2e"
+      "pre-push": "yarn enforce:gitflow && yarn prettify && yarn lint:app && yarn lint:lib && yarn test:app --watch=false && yarn test:lib --watch=false && yarn coverage && yarn e2e"
     }
   },
   "browserslist": [

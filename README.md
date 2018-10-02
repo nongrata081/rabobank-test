@@ -1,5 +1,16 @@
 # RabobankTest
 
+## Operations with records
+
+Below ops put output files to `statement_processor/records/dist`
+
+- `yarn parse:csv:records` convert csv records to json
+- `yarn parse:xml:records` convert xml records to json
+- `yarn merge:records` merge two json files into one
+- `yarn validate:records` validate records and generate invalid records json
+- `copy:records:to:assets` copy invalid records json to app's assets folder (`src/assets/records`)
+- `yarn records` do all of the above combined
+
 ## Git flow
 
 Following [Git Flow](https://nvie.com/posts/a-successful-git-branching-model/) branching strategy is forced

@@ -19,7 +19,13 @@
     "build:ssr": "yarn build:client-and-server-bundles && yarn webpack:server",
     "serve:ssr": "node dist/server.js",
     "ssr": "yarn build:ssr && yarn serve:ssr",
-    "enforce:gitflow": "node ./node_modules/.bin/enforce-gitflow-branches"
+    "enforce:gitflow": "node ./node_modules/.bin/enforce-gitflow-branches",
+    "parse:csv:records": "node ./statement_processor/parser/csv2json.js",
+    "parse:xml:records": "node ./statement_processor/parser/xml2json.js",
+    "merge:records": "node ./statement_processor/parser/mergeRecords.js",
+    "validate:records": "node ./statement_processor/validator/validateRecords.js",
+    "copy:records:to:assets": "cp ./statement_processor/records/dist/invalid-records.json src/assets/records/",
+    "records": "yarn parse:csv:records && yarn parse:xml:records && yarn merge:records && yarn validate:records && yarn copy:records:to:assets"
   },
   "private": true,
   "dependencies": {

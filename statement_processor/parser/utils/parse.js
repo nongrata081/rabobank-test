@@ -75,6 +75,5 @@ const parseFile = (srcFile, distFile) => {
 
 module.exports = {
 	file: parseFile,
-	csv: parseCSV,
-  merge: mergeFiles
+	csv: parseCSV
 };

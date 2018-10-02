@@ -5,8 +5,8 @@
     "ng": "ng",
     "start": "ng serve --hmr --configuration hmr -o",
     "build": "ng build",
-    "test": "ng test",
-    "lint": "ng lint",
+    "test": "ng test rabobank-test components",
+    "lint": "ng lint rabobank-test components",
     "e2e": "ng e2e",
     "commit": "git-cz",
     "prettify": "pretty-quick",
@@ -18,7 +18,8 @@
     "webpack:server": "webpack --config webpack.server.config.js --progress --colors",
     "build:ssr": "yarn build:client-and-server-bundles && yarn webpack:server",
     "serve:ssr": "node dist/server.js",
-    "ssr": "yarn build:ssr && yarn serve:ssr"
+    "ssr": "yarn build:ssr && yarn serve:ssr",
+    "enforce:gitflow": "node ./node_modules/.bin/enforce-gitflow-branches"
   },
   "private": true,
   "dependencies": {
@@ -100,7 +101,7 @@
     "hooks": {
       "pre-commit": "run-s prettify-staged lint",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "node ./node_modules/.bin/enforce-gitflow-branches"
+      "pre-push": "yarn enforce:gitflow && yarn prettify && yarn lint && yarn test && yarn coverage && yarn e2e"
     }
   },
   "browserslist": [

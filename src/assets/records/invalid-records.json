@@ -1,0 +1,40 @@
+{
+	"invalidRecords": {
+		"byReference": [
+			{
+				"reference": "112806",
+				"accountNumber": "NL74ABNA0248990274",
+				"description": "Candy from Jan de Vries",
+				"startBalance": "109.75",
+				"mutation": "-23.94",
+				"endBalance": "85.81"
+			},
+			{
+				"reference": "112806",
+				"accountNumber": "NL91RABO0315273637",
+				"description": "Clothes from Richard Theu�",
+				"startBalance": "31.03",
+				"mutation": "+0.27",
+				"endBalance": "31.3"
+			},
+			{
+				"reference": "112806",
+				"accountNumber": "NL91RABO0315273637",
+				"description": "Subscription from Vincent Dekker",
+				"startBalance": "68.31",
+				"mutation": "-6.31",
+				"endBalance": "62"
+			}
+		],
+		"byEndBalance": [
+			{
+				"reference": "184927",
+				"accountNumber": "NL43AEGO0773393871",
+				"description": "Flowers for Richard Dekker",
+				"startBalance": "42.43",
+				"mutation": "-43.43",
+				"endBalance": "-1"
+			}
+		]
+	}
+}

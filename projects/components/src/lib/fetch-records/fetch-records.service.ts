@@ -6,7 +6,7 @@ import { Observable } from 'rxjs';
 	providedIn: 'root'
 })
 export class FetchRecordsService {
-	url = './records/dist/invalid-records.json';
+	url = 'assets/records/invalid-records.json';
 	constructor(private http: HttpClient) {}
 
 	public getJSON(): Observable<any> {

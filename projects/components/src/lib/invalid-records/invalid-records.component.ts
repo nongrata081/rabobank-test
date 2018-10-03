@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FetchRecordsService } from '../fetch-records/fetch-records.service';
+import { Observable } from 'rxjs';
 
 @Component({
 	selector: 'lib-invalid-records',
@@ -9,14 +10,20 @@ import { FetchRecordsService } from '../fetch-records/fetch-records.service';
 export class InvalidRecordsComponent implements OnInit {
 	invalidReference = [];
 	invalidEndBalance = [];
+	json: Observable<any>;
 	displayedColumns: string[] = ['reference', 'description'];
 
-	constructor(private fetchRecordsService: FetchRecordsService) {}
+	constructor(
+		public fetchRecordsService: FetchRecordsService
+	) {}
 
 	ngOnInit() {
+		this.json = this.fetchRecordsService.getJSON();
 		this.fetchRecordsService.getJSON().subscribe(data => {
-			this.invalidReference = data.invalidRecords.byReference;
-			this.invalidEndBalance = data.invalidRecords.byEndBalance;
+			this.invalidReference =
+				data.invalidRecords.byReference;
+			this.invalidEndBalance =
+				data.invalidRecords.byEndBalance;
 		});
 	}
 }

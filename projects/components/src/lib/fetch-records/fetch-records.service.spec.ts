@@ -7,7 +7,7 @@ import {
 } from '@angular/common/http/testing';
 // import { TransactionRecords } from './transaction-record.interface';
 
-fdescribe('FetchRecordsService', () => {
+describe('FetchRecordsService', () => {
 	let service: FetchRecordsService;
 	let httpMock: HttpTestingController;
 
@@ -25,7 +25,7 @@ fdescribe('FetchRecordsService', () => {
 		httpMock.verify();
 	});
 
-	fit('should retrieve records from json file', () => {
+	it('should retrieve records from json file', () => {
 		const transactionRecordsMock = [
 			{
 				reference: '112806',

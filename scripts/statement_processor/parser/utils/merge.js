@@ -1,6 +1,6 @@
 const fs = require('fs');
 const path = require('path');
-const distMergedRecords = path.join(__dirname, '../../records/dist/merged-records.json');
+const distMergedRecords = path.join(__dirname, '../../../../records/dist/merged-records.json');
 
 const mergeFiles = (arr) => {
   let mergedArr = [];

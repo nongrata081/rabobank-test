@@ -2,7 +2,7 @@
 
 ## Operations with records
 
-Below ops put output files to `statement_processor/records/dist`
+Below ops put output files to `records/dist`
 
 - `yarn parse:csv:records` convert csv records to json
 - `yarn parse:xml:records` convert xml records to json
@@ -30,7 +30,13 @@ Run `yarn start` for a dev server. The app will automatically rebuild and replac
 
 ## Unit tests
 
-Run `yarn test` to execute the unit tests via [Karma](https://karma-runner.github.io) for `rabobank-test` app and `components` library. Watch mode disabled by default.
+For execution of unit tests run:
+
+- `yarn test:app` for rabobank-test app
+
+- `yarn test:lib` for components library
+
+- `yarn test:parser` for records parser and validator
 
 ## Linting
 
@@ -59,11 +65,7 @@ Run `yarn build` to build the project. The build artifacts will be stored in the
 
 ## SSR
 
-Run `yarn ssr` to build and server and serve with server-side rendering.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Run `yarn ssr` to build client and server and serve with server-side rendering.
 
 ## CI
 
@@ -71,8 +73,11 @@ Steps in `Travis CI` include:
 
 - Commit linting
 - Prettifying
-- Code linting
-- Unit testing
+- Parser & Validator unit tests
+- Linting rabobank-test app
+- Linting components library
+- Unit testing rabobank-test app
+- Unit testing components library
 - Unit test coverage
 - E2E testing
 - Build
@@ -98,7 +103,11 @@ Add `--view` flag to open report after generation.
 
 ## TODO
 
-- Unit tests for parser and validator
-- Unit tests `rabobank-test` app and `components` library
 - Automate dependency updates via [renovate](https://github.com/renovatebot/renovate)
 - Add [SonarQube](https://github.com/SonarSource/sonarqube) for contintuous inspection (code quality and cyclomatic complexity)
+- Add visual regression testing
+- Add A11Y testing
+
+## Code scaffolding
+
+Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.

@@ -30,8 +30,8 @@
     "copy:records:to:assets": "cp ./records/dist/invalid-records.json src/assets/records/",
     "records": "yarn parse:csv:records && yarn parse:xml:records && yarn merge:records && yarn validate:records && yarn copy:records:to:assets",
     "bundle:report": "webpack-bundle-analyzer dist/rabobank-test/stats.json",
-    "lighthouse:mobile": "node ./node_modules/.bin/lighthouse http://localhost:4000 --output-path ./lighthouse-report/mobile/report.html",
-    "lighthouse:desktop": "node ./node_modules/.bin/lighthouse http://localhost:4000 --disable-device-emulation --output-path ./lighthouse-report/desktop/report.html"
+    "lighthouse:mobile": "node ./node_modules/.bin/lighthouse http://localhost:4000 --output-path ./lighthouse-mobile-report.html",
+    "lighthouse:desktop": "node ./node_modules/.bin/lighthouse http://localhost:4000 --disable-device-emulation --output-path ./lighthouse-desktop-report.html"
   },
   "private": true,
   "dependencies": {

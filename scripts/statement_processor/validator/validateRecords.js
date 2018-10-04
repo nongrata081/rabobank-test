@@ -1,8 +1,4 @@
-const path = require('path');
 const validate = require('./utils/validate');
-const recordsFile = path.join(
-	__dirname,
-	'../../../records/dist/merged-records.json'
-);
+const paths = require('../paths');
 
-validate.records(recordsFile);
+validate.records(paths.recordsFile);

@@ -1,9 +1,4 @@
-const path = require('path');
 const parse = require('./utils/parse');
-const srcXmlFile = path.join(__dirname, '../../../records/src/records.xml');
-const distXmlPath = path.join(
-	__dirname,
-	`../../../records/dist/records-from-xml.json`
-);
+const paths = require('../paths');
 
-parse.file(srcXmlFile, distXmlPath);
+parse.file(paths.srcXmlFile, paths.distXmlPath);

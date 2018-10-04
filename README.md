@@ -81,9 +81,20 @@ Steps in `Travis CI` include:
 
 Deployed app is available [here](https://nongrata081.github.io/rabobank-test/)
 
-## Analyze bundle
+## Analyze bundle size
 
-Runn `yarn bundle:report` to see the bundle size report by [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
+Run `yarn bundle:report` to see the bundle size report by [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
+
+## Analyze performance
+
+Performance reports are generated via [Lighthouse](https://github.com/GoogleChrome/lighthouse). Network simulation is 3G by default.
+
+Run `yarn ssr` to build and serve app with SSR and run:
+
+- `yarn lighthouse:mobile` to generate report with mobile device emulation
+- `yarn lighthouse:desktop` to generate report for desktop
+
+Add `--view` flag to open report after generation.
 
 ## TODO
 
@@ -91,4 +102,3 @@ Runn `yarn bundle:report` to see the bundle size report by [webpack-bundle-analy
 - Unit tests `rabobank-test` app and `components` library
 - Automate dependency updates via [renovate](https://github.com/renovatebot/renovate)
 - Add [SonarQube](https://github.com/SonarSource/sonarqube) for contintuous inspection (code quality and cyclomatic complexity)
-- Add [lighthouse](https://github.com/GoogleChrome/lighthouse) for audit, performance metrics & best practice

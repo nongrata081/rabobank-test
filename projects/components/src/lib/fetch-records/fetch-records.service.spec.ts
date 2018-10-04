@@ -26,7 +26,7 @@ describe('FetchRecordsService', () => {
 		httpMock.verify();
 	});
 
-	it('should retrieve invalid reference records from json file', () => {
+	it('should retrieve reference records from json file', () => {
 		const serviceStub =
 			FetchRecordsServiceStub.invalidRecords.byReference;
 		service.getJSON().subscribe(records => {
@@ -37,7 +37,7 @@ describe('FetchRecordsService', () => {
 		request.flush(serviceStub);
 	});
 
-	it('should retrieve invalid end balance records from json file', () => {
+	it('should retrieve end balance records from json file', () => {
 		const serviceStub =
 			FetchRecordsServiceStub.invalidRecords.byEndBalance;
 		service.getJSON().subscribe(records => {

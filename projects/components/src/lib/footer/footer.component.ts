@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class FooterComponent implements OnInit {
 	copyrightMessage = 'made by';
 	author = 'Vahan Minasian';
+	authorFbLink = 'https://www.facebook.com/vaan.minasian';
 
 	constructor() {}
 

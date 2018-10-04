@@ -23,9 +23,12 @@ export class InvalidRecordsComponent implements OnInit {
 	constructor(public fetchRecordsService: FetchRecordsService) {}
 
 	ngOnInit() {
+		this.json = this.fetchRecordsService.getJSON();
 		this.fetchRecordsService.getJSON().subscribe(data => {
-			this.invalidReference = data.invalidRecords.byReference;
-			this.invalidEndBalance = data.invalidRecords.byEndBalance;
+			this.invalidReference =
+				data.invalidRecords.byReference;
+			this.invalidEndBalance =
+				data.invalidRecords.byEndBalance;
 		});
 	}
 }

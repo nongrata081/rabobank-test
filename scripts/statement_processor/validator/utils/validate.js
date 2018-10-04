@@ -2,7 +2,7 @@ const fs = require('fs');
 const path = require('path');
 const distInvalidRecords = path.join(
 	__dirname,
-	'../../records/dist/invalid-records.json'
+	'../../../../records/dist/invalid-records.json'
 );
 
 const arrContainsObjNot = (arr, obj) => {
@@ -18,10 +18,16 @@ const validateReference = records => {
 			let verifiedObj = i;
 
 			if (currentObj !== verifiedObj) {
-				if (currentObj.reference === verifiedObj.reference) {
-					if (arrContainsObjNot(invalidRecords, currentObj)) {
+				if (
+					currentObj.reference === verifiedObj.reference
+				) {
+					if (
+						arrContainsObjNot(invalidRecords, currentObj)
+					) {
 						invalidRecords.push(currentObj);
-					} else if (arrContainsObjNot(invalidRecords, verifiedObj)) {
+					} else if (
+						arrContainsObjNot(invalidRecords, verifiedObj)
+					) {
 						invalidRecords.push(verifiedObj);
 					}
 				}
@@ -49,22 +55,34 @@ const validateEndBalance = records => {
 	return 'There are no invalid records by end balance. All records have positive end balance';
 };
 
-const generateReport = (distFilePath, invalidRecords, message) => {
-	fs.writeFile(distFilePath, JSON.stringify(invalidRecords, null, 2), err => {
-		if (!err) {
-			console.log(message + ` ${distFilePath}`);
-		} else {
-			console.log(err);
+const generateReport = (
+	distFilePath,
+	invalidRecords,
+	message
+) => {
+	fs.writeFile(
+		distFilePath,
+		JSON.stringify(invalidRecords, null, 2),
+		err => {
+			if (!err) {
+				console.log(message + ` ${distFilePath}`);
+			} else {
+				console.log(err);
+			}
 		}
-	});
+	);
 };
 
 const validateRecords = file => {
 	fs.readFile(file, { encoding: 'utf-8' }, (err, data) => {
 		if (!err) {
 			let records = JSON.parse(data);
-			let invalidReferenceRecords = validateReference(records);
-			let invalidEndBalanceRecords = validateEndBalance(records);
+			let invalidReferenceRecords = validateReference(
+				records
+			);
+			let invalidEndBalanceRecords = validateEndBalance(
+				records
+			);
 
 			let invalidRecords = {
 				invalidRecords: {

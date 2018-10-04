@@ -1,4 +1,9 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+	async,
+	ComponentFixture,
+	fakeAsync,
+	TestBed
+} from '@angular/core/testing';
 
 import { InvalidRecordsComponent } from './invalid-records.component';
 import { MatTableModule } from '@angular/material';
@@ -37,7 +42,9 @@ describe('InvalidRecordsComponent', () => {
 	}));
 
 	beforeEach(() => {
-		fixture = TestBed.createComponent(InvalidRecordsComponent);
+		fixture = TestBed.createComponent(
+			InvalidRecordsComponent
+		);
 		component = fixture.componentInstance;
 		de = fixture.debugElement;
 		fixture.detectChanges();

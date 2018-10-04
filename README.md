@@ -81,11 +81,14 @@ Steps in `Travis CI` include:
 
 Deployed app is available [here](https://nongrata081.github.io/rabobank-test/)
 
+## Analyze bundle
+
+Runn `yarn bundle:report` to see the bundle size report by [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
+
 ## TODO
 
 - Unit tests for parser and validator
 - Unit tests `rabobank-test` app and `components` library
 - Automate dependency updates via [renovate](https://github.com/renovatebot/renovate)
-- Add [webpack-bundle-analyzer](https://github.com/webpack-contrib/webpack-bundle-analyzer)
 - Add [SonarQube](https://github.com/SonarSource/sonarqube) for contintuous inspection (code quality and cyclomatic complexity)
 - Add [lighthouse](https://github.com/GoogleChrome/lighthouse) for audit, performance metrics & best practice

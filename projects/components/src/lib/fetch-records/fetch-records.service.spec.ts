@@ -5,10 +5,10 @@ import {
 	HttpClientTestingModule,
 	HttpTestingController
 } from '@angular/common/http/testing';
-// import { TransactionRecords } from './transaction-record.interface';
-const FetchRecordsServiceStub = require('./fetch-records.service.stub.json');
+import { Records } from './transaction-record.interface';
+const FetchRecordsServiceStub: Records = require('./fetch-records.service.stub.json');
 
-describe('FetchRecordsService', () => {
+fdescribe('FetchRecordsService', () => {
 	let service: FetchRecordsService;
 	let httpMock: HttpTestingController;
 
@@ -26,10 +26,22 @@ describe('FetchRecordsService', () => {
 		httpMock.verify();
 	});
 
-	it('should retrieve records from json file', () => {
-		const serviceStub = FetchRecordsServiceStub.invalidRecords.byReference;
+	it('should retrieve invalid reference records from json file', () => {
+		const serviceStub =
+			FetchRecordsServiceStub.invalidRecords.byReference;
 		service.getJSON().subscribe(records => {
 			expect(records.length).toBe(3);
+		});
+		const request = httpMock.expectOne(service.url);
+		expect(request.request.method).toBe('GET');
+		request.flush(serviceStub);
+	});
+
+	it('should retrieve invalid end balance records from json file', () => {
+		const serviceStub =
+			FetchRecordsServiceStub.invalidRecords.byEndBalance;
+		service.getJSON().subscribe(records => {
+			expect(records.length).toBe(1);
 		});
 		const request = httpMock.expectOne(service.url);
 		expect(request.request.method).toBe('GET');

@@ -1,9 +1,5 @@
 const fs = require('fs');
-const path = require('path');
-const distInvalidRecords = path.join(
-	__dirname,
-	'../../../../records/dist/invalid-records.json'
-);
+const paths = require('../../paths');
 
 const arrContainsObjNot = (arr, obj) => {
 	return arr.indexOf(obj) === -1;
@@ -92,7 +88,7 @@ const validateRecords = file => {
 			};
 
 			generateReport(
-				distInvalidRecords,
+				paths.distInvalidRecords,
 				invalidRecords,
 				'Invalid records were written to'
 			);

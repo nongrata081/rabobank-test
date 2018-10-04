@@ -1,8 +1,4 @@
-const path = require('path');
 const mergeRecords = require('./utils/merge');
-const distCsvFile = path.join(__dirname, '../../../records/dist/records-from-csv.json');
-const distXmlFile = path.join(__dirname, '../../../records/dist/records-from-xml.json');
+const paths = require('../paths');
 
-let recordsFiles = [distCsvFile, distXmlFile];
-
-mergeRecords.files(recordsFiles);
+mergeRecords.files([paths.distXmlPath, paths.distCsvPath]);

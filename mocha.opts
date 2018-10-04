@@ -1,0 +1,2 @@
+--recursive ./scripts/**/*.spec.js
+--require mocha-steps

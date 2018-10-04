@@ -29,7 +29,9 @@
     "validate:records": "node ./scripts/statement_processor/validator/validateRecords.js",
     "copy:records:to:assets": "cp ./records/dist/invalid-records.json src/assets/records/",
     "records": "yarn parse:csv:records && yarn parse:xml:records && yarn merge:records && yarn validate:records && yarn copy:records:to:assets",
-    "bundle:report": "webpack-bundle-analyzer dist/rabobank-test/stats.json"
+    "bundle:report": "webpack-bundle-analyzer dist/rabobank-test/stats.json",
+    "lighthouse:mobile": "node ./node_modules/.bin/lighthouse http://localhost:4000 --output-path ./lighthouse-report/mobile/report.html",
+    "lighthouse:desktop": "node ./node_modules/.bin/lighthouse http://localhost:4000 --disable-device-emulation --output-path ./lighthouse-report/desktop/report.html"
   },
   "private": true,
   "dependencies": {
@@ -85,6 +87,7 @@
     "karma-coverage-istanbul-reporter": "~2.0.0",
     "karma-jasmine": "~1.1.1",
     "karma-jasmine-html-reporter": "^0.2.2",
+    "lighthouse": "^3.2.1",
     "mocha": "^5.2.0",
     "mocha-steps": "^1.1.0",
     "ng-packagr": "^3.0.0",

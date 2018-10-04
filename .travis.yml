@@ -21,6 +21,7 @@ cache:
 script:
   - commitlint-travis
   - yarn prettify
+  - yarn test:parser
   - yarn lint:app
   - yarn lint:lib
   - ng test --watch=false --no-progress rabobank-test --karma-config=./src/coverage-karma.conf.js

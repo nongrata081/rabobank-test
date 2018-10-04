@@ -50,22 +50,21 @@ describe('InvalidRecordsComponent', () => {
 		fixture.detectChanges();
 	});
 
-	it('should create', () => {
-		expect(component).toBeTruthy();
-	});
-
-	it('should render proper page title', () => {
+	it('should render proper content-page-title', () => {
 		expect(
-			de.query(By.css('.content-page-title')).nativeElement.innerText
+			de.query(By.css('.content-page-title')).nativeElement
+				.innerText
 		).toEqual(component.pageTitle);
 	});
 
 	it('should render proper table headings', () => {
 		expect(
-			de.query(By.css('.table-heading.reference')).nativeElement.innerText
+			de.query(By.css('.table-heading.reference'))
+				.nativeElement.innerText
 		).toEqual(component.referenceTableHeading);
 		expect(
-			de.query(By.css('.table-heading.balance')).nativeElement.innerText
+			de.query(By.css('.table-heading.balance'))
+				.nativeElement.innerText
 		).toEqual(component.balanceTableHeading);
 	});
 
@@ -75,7 +74,7 @@ describe('InvalidRecordsComponent', () => {
 		expect(component.invalidEndBalance.length).toEqual(1);
 	});
 
-	it('should render invalid reference table with proper content', () => {
+	it('should render reference table with proper content', () => {
 		fixture.detectChanges();
 
 		const tableElement = fixture.nativeElement.querySelector(
@@ -91,7 +90,7 @@ describe('InvalidRecordsComponent', () => {
 		]);
 	});
 
-	it('should render invalid end balance table with proper content', () => {
+	it('should render end balance table with proper content', () => {
 		fixture.detectChanges();
 
 		const tableElement = fixture.nativeElement.querySelector(

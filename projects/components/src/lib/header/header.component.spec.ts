@@ -28,18 +28,10 @@ describe('HeaderComponent', () => {
 		fixture.detectChanges();
 	});
 
-	it('should create', () => {
-		expect(component).toBeTruthy();
-	});
-
-	it('should have a "Customer statement processor" title', () => {
-		expect(component.title).toEqual('Customer statement processor');
-	});
-
-	it('should render text in navbar', () => {
+	it('should render proper title in navbar', () => {
 		expect(
-			de.query(By.css('mdb-navbar mdb-navbar-brand span.navbar-brand'))
-				.nativeElement.innerText
-		).toContain('Customer statement processor');
+			de.query(By.css('.navbar-brand')).nativeElement
+				.innerText
+		).toEqual(component.title);
 	});
 });

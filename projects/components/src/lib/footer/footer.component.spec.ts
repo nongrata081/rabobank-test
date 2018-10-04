@@ -1,4 +1,8 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {
+	async,
+	ComponentFixture,
+	TestBed
+} from '@angular/core/testing';
 
 import { FooterComponent } from './footer.component';
 import { DebugElement } from '@angular/core';
@@ -26,23 +30,18 @@ describe('FooterComponent', () => {
 		expect(component).toBeTruthy();
 	});
 
-	it('should have a copyright message', () => {
-		expect(component.copyrightMessage).toEqual('made by');
-	});
-
-	it('should have author name', () => {
-		expect(component.author).toEqual('Vahan Minasian');
-	});
-
-	it('should render text in footer element', () => {
-		expect(de.query(By.css('footer')).nativeElement.innerText).toContain(
-			'made by Vahan Minasian'
+	it('should render proper author credentials', () => {
+		expect(
+			de.query(By.css('footer')).nativeElement.innerText
+		).toContain(
+			component.copyrightMessage + ' ' + component.author
 		);
 	});
 
-	it('link in footer should be leading to facebook page', () => {
-		expect(de.query(By.css('.footer-copyright a')).nativeElement.href).toBe(
-			'https://www.facebook.com/vaan.minasian'
-		);
+	it("should render link to author's facebook page", () => {
+		expect(
+			de.query(By.css('.footer-copyright a')).nativeElement
+				.href
+		).toBe(component.authorFbLink);
 	});
 });

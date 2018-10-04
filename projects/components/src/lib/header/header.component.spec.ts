@@ -33,18 +33,13 @@ describe('HeaderComponent', () => {
 	});
 
 	it('should have a "Customer statement processor" title', () => {
-		expect(component.title).toEqual(
-			'Customer statement processor'
-		);
+		expect(component.title).toEqual('Customer statement processor');
 	});
 
 	it('should render text in navbar', () => {
 		expect(
-			de.query(
-				By.css(
-					'mdb-navbar mdb-navbar-brand span.navbar-brand'
-				)
-			).nativeElement.innerText
+			de.query(By.css('mdb-navbar mdb-navbar-brand span.navbar-brand'))
+				.nativeElement.innerText
 		).toContain('Customer statement processor');
 	});
 });

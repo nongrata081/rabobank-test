@@ -8,14 +8,19 @@ import { Observable } from 'rxjs';
 	styleUrls: ['./invalid-records.component.css']
 })
 export class InvalidRecordsComponent implements OnInit {
+	pageTitle = 'Invalid records';
+	referenceTableHeading = 'By reference';
+	balanceTableHeading = 'By end balance';
 	invalidReference = [];
 	invalidEndBalance = [];
 	json: Observable<any>;
 	displayedColumns: string[] = ['reference', 'description'];
+	columnTitles = {
+		reference: 'Transaction reference',
+		description: 'Description'
+	};
 
-	constructor(
-		public fetchRecordsService: FetchRecordsService
-	) {}
+	constructor(public fetchRecordsService: FetchRecordsService) {}
 
 	ngOnInit() {
 		this.json = this.fetchRecordsService.getJSON();

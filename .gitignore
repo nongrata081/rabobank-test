@@ -4,6 +4,7 @@
 /dist
 /tmp
 /out-tsc
+/lighthouse-report
 
 # dependencies
 /node_modules

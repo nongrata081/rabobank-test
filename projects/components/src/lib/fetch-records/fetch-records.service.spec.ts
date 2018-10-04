@@ -8,7 +8,7 @@ import {
 import { Records } from './transaction-record.interface';
 const FetchRecordsServiceStub: Records = require('./fetch-records.service.stub.json');
 
-fdescribe('FetchRecordsService', () => {
+describe('FetchRecordsService', () => {
 	let service: FetchRecordsService;
 	let httpMock: HttpTestingController;
 

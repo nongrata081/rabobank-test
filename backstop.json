@@ -23,7 +23,7 @@
 		{
 			"label": "homepage",
 			"cookiePath": "backstop_data/engine_scripts/cookies.json",
-			"url": "http://localhost:4200/",
+			"url": "./dist/rabobank-test/index.html",
 			"referenceUrl": "",
 			"readyEvent": "",
 			"readySelector": "",

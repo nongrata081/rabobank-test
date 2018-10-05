@@ -35,6 +35,7 @@
     "backstop":"node ./node_modules/backstopjs/cli/index.js",
     "backstop:reference": "yarn backstop reference",
     "backstop:test": "yarn backstop test && yarn backstop openReport",
+    "backstop:test:ci": "yarn backstop test && yarn backstop",
     "backstop:approve": "yarn backstop approve",
     "backstop:open:latest": "yarn backstop openReport"
   },
@@ -126,7 +127,7 @@
     "hooks": {
       "pre-commit": "run-s prettify-staged lint:app lint:lib",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "yarn enforce:gitflow && yarn prettify && yarn test:parser && yarn lint:app && yarn lint:lib && yarn test:app --watch=false && yarn test:lib --watch=false && yarn coverage && yarn e2e && yarn build && yarn backstop:test"
+      "pre-push": "yarn enforce:gitflow && yarn prettify && yarn test:parser && yarn lint:app && yarn lint:lib && yarn test:app --watch=false && yarn test:lib --watch=false && yarn coverage && yarn e2e && yarn build && yarn backstop:test:ci"
     }
   },
   "browserslist": [

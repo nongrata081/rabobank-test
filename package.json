@@ -125,7 +125,7 @@
     "hooks": {
       "pre-commit": "run-s prettify-staged lint:app lint:lib",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-push": "yarn enforce:gitflow && yarn prettify && yarn test:parser && yarn lint:app && yarn lint:lib && yarn test:app --watch=false && yarn test:lib --watch=false && yarn coverage && yarn e2e"
+      "pre-push": "yarn enforce:gitflow && yarn prettify && yarn test:parser && yarn lint:app && yarn lint:lib && yarn test:app --watch=false && yarn test:lib --watch=false && yarn coverage && yarn e2e && yarn build && yarn backstop:test"
     }
   },
   "browserslist": [

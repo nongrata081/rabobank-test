@@ -35,7 +35,7 @@
     "backstop":"node ./node_modules/backstopjs/cli/index.js",
     "backstop:reference": "yarn backstop reference",
     "backstop:test": "yarn backstop test && yarn backstop openReport",
-    "backstop:test:ci": "yarn backstop test && yarn backstop",
+    "backstop:test:ci": "yarn backstop test",
     "backstop:approve": "yarn backstop approve",
     "backstop:open:latest": "yarn backstop openReport"
   },

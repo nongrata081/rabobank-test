@@ -76,7 +76,12 @@ Run `yarn build` to build the project. The build artifacts will be stored in the
 
 ## SSR
 
-Run `yarn ssr` to build client and server and serve with server-side rendering.
+To verify that SSR works, run:
+
+- `yarn ssr` to build client and server and serve with server-side rendering
+- `curl http://localhost:4200/ > curl.html` that will put all the contents of the retrieved html file via http request to **curl.html** in the root.
+
+All contents of the app component will be rendered to retrieved html file. If you do the same with `yarn start` the retrieved html file will only contain `<app-root></app-root>` element but not its content.
 
 ## CI
 

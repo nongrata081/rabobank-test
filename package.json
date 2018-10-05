@@ -32,10 +32,11 @@
     "bundle:report": "webpack-bundle-analyzer dist/rabobank-test/stats.json",
     "lighthouse:mobile": "node ./node_modules/.bin/lighthouse http://localhost:4000 --output-path ./lighthouse-mobile-report.html",
     "lighthouse:desktop": "node ./node_modules/.bin/lighthouse http://localhost:4000 --disable-device-emulation --output-path ./lighthouse-desktop-report.html",
-    "backstop:reference": "node ./node_modules/backstopjs/cli/index.js reference",
-    "backstop:test": "node ./node_modules/backstopjs/cli/index.js test",
-    "backstop:approve": "node ./node_modules/backstopjs/cli/index.js approve",
-    "backstop:open:latest": "node ./node_modules/backstopjs/cli/index.js openReport"
+    "backstop":"node ./node_modules/backstopjs/cli/index.js",
+    "backstop:reference": "yarn backstop reference",
+    "backstop:test": "yarn backstop test && yarn backstop openReport",
+    "backstop:approve": "yarn backstop approve",
+    "backstop:open:latest": "yarn backstop openReport"
   },
   "private": true,
   "dependencies": {

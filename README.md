@@ -101,6 +101,15 @@ Budgets for different parts of the app (e.g. bundles) can be set in `angular.jso
 
 According to above example, console will output warning when main bundle exceeds 200kb from baseline of 750kb. If it exceeds 400kb, the build will fail.
 
+## Visual regression
+
+Done via [BackstopJS](https://github.com/garris/BackstopJS)
+
+- `yarn backstop:reference` to create reference images
+- `yarn backstop:test` to test current app against reference images
+- `yarn backstop:approve` to approve tested images
+- `yarn backstop:open:latest` to open latest test report
+
 ## CI
 
 Steps in `Travis CI` include:
@@ -139,7 +148,7 @@ Add `--view` flag to open report after generation.
 
 - Automate dependency updates via [renovate](https://github.com/renovatebot/renovate)
 - Add [SonarQube](https://github.com/SonarSource/sonarqube) for contintuous inspection (code quality and cyclomatic complexity)
-- Add visual regression testing
+- Add visual regression testing to CI
 - Add A11Y testing
 
 ## Code scaffolding

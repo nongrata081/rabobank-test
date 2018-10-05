@@ -1,5 +1,12 @@
 # RabobankTest
 
+## Prerequisites
+
+Use [nvm](https://github.com/creationix/nvm) to switch node versions. Project was tested on:
+
+- Node v8.11.3 `nvm install v8.11.3`
+- Yarn v1.10.1 `npm i -g yarn@1.10.1`
+
 ## Operations with records
 
 Below ops put output files to `records/dist`

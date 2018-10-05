@@ -83,6 +83,24 @@ To verify that SSR works, run:
 
 All contents of the app component will be rendered to retrieved html file. If you do the same with `yarn start` the retrieved html file will only contain `<app-root></app-root>` element but not its content.
 
+## Budgets
+
+Budgets for different parts of the app (e.g. bundles) can be set in `angular.json` :
+
+```json
+"budgets": [
+  {
+    "type": "bundle",
+    "name": "main",
+    "baseline": "750kb",
+    "warning": "200kb",
+    "error": "400kb"
+  }
+]
+```
+
+According to above example, console will output warning when main bundle exceeds 200kb from baseline of 750kb. If it exceeds 400kb, the build will fail.
+
 ## CI
 
 Steps in `Travis CI` include:

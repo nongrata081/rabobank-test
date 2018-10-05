@@ -30,7 +30,6 @@ script:
   - yarn webdriver-update-ci
   - ng e2e --protractor-config=./e2e/protractor-ci.conf.js --webdriver-update=false
   - ng build --prod
-  - yarn backstop:test
 
 deploy:
   provider: pages

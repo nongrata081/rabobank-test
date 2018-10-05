@@ -26,7 +26,7 @@ Committing files via `git commit` will not provide a prompt and it will still fo
 
 ## Development server
 
-Run `yarn start` for a dev server. The app will automatically rebuild and replace changed parts of the app thanks to hot module replacement.
+Run `yarn start` for a dev server. The app will automatically rebuild and replace changed parts of the app without page refresh thanks to **hot module replacement**.
 
 ## Unit tests
 
@@ -40,7 +40,11 @@ For execution of unit tests run:
 
 ## Linting
 
-Run `yarn lint` to execute linting for `rabobank-test` app and `components` library.
+For execution of unit tests run:
+
+- `yarn lint:app` for rabobank-test app
+
+- `yarn lint:lib` for components library
 
 ## End-to-end tests
 
@@ -57,7 +61,7 @@ Run `yarn coverage` to test the codebase against unit-test coverage thresholds s
 
 ## Changelog
 
-Run `yarn generate:changelog` to generate `CHANGELOG.md` in the root, based on commit history formatted according to conventional changelog.
+Run `yarn changelog` to generate `CHANGELOG.md` in the root, based on commit history formatted according to conventional changelog.
 
 ## Build
 

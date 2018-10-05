@@ -124,6 +124,8 @@ Steps in `Travis CI` include:
 - Unit test coverage
 - E2E testing
 - Build
+- Visual regression testing
+- Deploy
 
 ## Deploy
 
